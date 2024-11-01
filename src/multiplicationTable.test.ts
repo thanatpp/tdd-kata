@@ -1,14 +1,5 @@
 import { describe, test, expect } from "bun:test";
-
-export function multiplicationTable(size: number): number[][] {
-  return Array(size)
-    .fill(-1)
-    .map((_, i) => {
-      return Array(size)
-        .fill(-1)
-        .map((_, j) => (i + 1) * (j + 1));
-    });
-}
+import { multiplicationTable } from "./multiplicationTable";
 
 describe("Multiplication Table", () => {
   test("size = 1", () => {
